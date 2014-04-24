@@ -1,0 +1,47 @@
+[core]
+	autocrlf = true
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+[http]
+	sslVerify = false
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = red bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = green bold
+	changed = red bold
+	untracked = cyan bold
+[merge]
+	tool = p4merge
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "p4merge"]
+	path = c:/Program Files/Perforce/p4merge.exe
+	cmd = \"c:/Program Files/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[diff]
+	guitool = p4merge
+[difftool]
+	prompt = false
+[difftool "p4merge"]
+	path = C:/Program Files/Perforce/p4merge.exe
+	cmd = \"c:/Program Files/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[credential]
+	helper = !\"C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\"
+[alias]
+    config-public = !git config user.name \"domaindrivendev\" && git config user.email domaindrivendev@gmail.com
